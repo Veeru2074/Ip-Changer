@@ -35,7 +35,7 @@ if [ -d "$IPCHANGER" ]; then
     cd "$IPCHANGER"
     git pull origin master
 else
-    git clone https://github.com/Anon4You/Ip-Changer.git "$IPCHANGER"
+    git clone https://github.com/Veeru2074/Ip-Changer.git "$IPCHANGER"
     echo -e "${GREEN}✅ Repository cloned successfully!${NC}"
 fi
 
