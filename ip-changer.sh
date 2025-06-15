@@ -31,7 +31,8 @@ ${CYAN}⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀�
 ⠀⣼⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀
 ${RESET}run ip-changer -h to see usage
-${BLUE}PROXY : 127.0.0.1 PORT 8118${RESET}
+${BLUE}PROXY : 127.0.0.1 PORT 9050
+${RESET}
 
 "
 
@@ -88,7 +89,7 @@ EOF
 done
 
 cat <<EOF > "$IPCHANGER/.privoxy/config"
-listen-address 127.0.0.1:8118
+listen-address 127.0.0.1:9050
 EOF
 for port in "${PORTS[@]}"; do
     echo "forward-socks5 / 127.0.0.1:$port ." >> "$IPCHANGER/.privoxy/config"
